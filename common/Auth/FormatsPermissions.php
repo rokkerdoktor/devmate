@@ -10,7 +10,7 @@ trait FormatsPermissions {
     public function setPermissionsAttribute($value)
     {
         if ( ! is_array($value)) {
-            $value = json_decode($value, true);
+            $value = json_decode($value);
         }
 
         $permissions = array_map(function($permissionValue) {

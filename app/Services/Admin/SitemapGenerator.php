@@ -71,12 +71,10 @@ class SitemapGenerator {
         [
             'model' => NewsArticle::class,
             'columns' => ['id', 'name'],
-            'wheres' => ['type' => 'news_article'],
         ],
         [
             'model' => Page::class,
             'columns' => ['id', 'title', 'slug'],
-            'wheres' => ['type' => 'default'],
         ],
     ];
 
@@ -197,8 +195,7 @@ class SitemapGenerator {
      */
     private function getModelUrl($model)
     {
-        $namespace = get_class($model);
-        $name = strtolower(substr($namespace, strrpos($namespace, '\\') + 1));
+        $name = Str::singular($model->getTable());
         return $this->urlGenerator->$name($model);
     }
 

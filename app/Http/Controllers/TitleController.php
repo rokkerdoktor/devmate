@@ -17,7 +17,7 @@ use Common\Core\Controller;
 use DB;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class TitleController extends Controller
 {
@@ -55,42 +55,26 @@ class TitleController extends Controller
 
     /**
      * @param string|integer $titleId
-     * @param string $seasonNumber
-     * @param string $episodeNumber
+     * @param $seasonNumber
      * @return JsonResponse
      */
-    public function show($titleId, $seasonNumber = null, $episodeNumber = null)
+    public function show($titleId, $seasonNumber = null)
     {
         $this->authorize('show', Title::class);
 
         // season ID can be based in either via query or url params
         $params = $this->request->all();
         if ( ! isset($params['seasonNumber'])) $params['seasonNumber'] = $seasonNumber;
-        if ( ! isset($params['episodeNumber'])) $params['episodeNumber'] = $episodeNumber;
 
         $response = app(ShowTitle::class)->execute($titleId, $params);
 
         $this->dispatch(new IncrementModelViews($response['title']));
 
-        $type = 'title';
-        $dataForSeo = null;
-        if ($episodeNumber = Arr::get($params, 'episodeNumber')) {
-            $type = 'episode';
-            // need to specify data for seo generator manually as episode will be
-            // nested under title and placeholder replacement will not work otherwise
-            $episode = Arr::first($response['title']['season']['episodes'], function($episode) use($episodeNumber) {
-                return $episode['episode_number'] === (int) $episodeNumber;
-            });
-            $dataForSeo = ['episode' => $episode];
-        } else if (Arr::get($params, 'seasonNumber')) {
-            $type = 'season';
-        }
-
+        $type = $params['seasonNumber'] ? 'season' : 'title';
         $options = [
             'prerender' => [
                 'view' => "$type.show",
                 'config' => "$type.show",
-                'dataForSeo' => $dataForSeo
             ]
         ];
 

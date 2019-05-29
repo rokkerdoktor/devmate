@@ -37,15 +37,15 @@ class HomepageContentController extends Controller
         $itemCount = $this->settings->get('homepage.list_items_count', 10);
         $sliderItemCount = $this->settings->get('homepage.slider_items_count', 5);
 
+        $lists = $lists->map(function(ListModel $list) use($itemCount, $sliderItemCount, $homepageLists) {
+            $list->items = $list->getItems(['limit' => $list->id === $homepageLists[0] ? $sliderItemCount : min($itemCount, 30)]);
+            return $list;
+        });
+
         // sort lists by order specified in settings
         $lists = $lists->sortBy(function($model) use($homepageLists) {
             return array_search($model->id, $homepageLists);
         })->values();
-
-        $lists = $lists->map(function(ListModel $list, $index) use($itemCount, $sliderItemCount, $homepageLists) {
-            $list->items = $list->getItems(['limit' => $index === 0 ? $sliderItemCount : min($itemCount, 30)]);
-            return $list;
-        });
 
         $options = [
             'prerender' => [

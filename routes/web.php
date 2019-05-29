@@ -96,7 +96,7 @@ $homeController = '\Common\Core\Controllers\HomeController@show';
 Route::get('/', 'HomepageContentController@show')->middleware('prerenderIfCrawler');
 Route::get('browse', 'TitleController@index')->middleware('prerenderIfCrawler');
 Route::get('titles/{id}', 'TitleController@show')->middleware('prerenderIfCrawler');
-Route::get('titles/{id}/season/{season}/episode/{episode}', 'TitleController@show')->middleware('prerenderIfCrawler');
+Route::get('titles/{id}/season/{season}/episode/{episode}', 'EpisodeController@show')->middleware('prerenderIfCrawler');
 Route::get('titles/{id}/season/{season}', 'TitleController@show')->middleware('prerenderIfCrawler');
 Route::get('people', 'PersonController@index')->middleware('prerenderIfCrawler');
 Route::get('people/{id}', 'PersonController@show')->middleware('prerenderIfCrawler');

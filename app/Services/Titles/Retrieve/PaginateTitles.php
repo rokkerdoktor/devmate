@@ -50,7 +50,7 @@ class PaginateTitles
             $genres = explode(',', $genre);
             $paginator->query()->whereHas('genres', function(Builder $query) use($genres) {
                 $genres = array_map(function($genre) {
-                    return Str::slug($genre, ' ');
+                    return Str::slug($genre);
                 }, $genres);
                 $query->whereIn('name', $genres);
             });

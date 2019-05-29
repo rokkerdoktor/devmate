@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\ListModel;
 use App\Title;
 use App\Person;
 use App\Season;
@@ -37,10 +38,6 @@ class UrlGenerator extends BaseUrlGenerator
     public function article($article)
     {
         return url("news/{$article['id']}");
-    }
-
-    public function newsArticle($article) {
-        return $this->article($article);
     }
 
     /**

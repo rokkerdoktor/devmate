@@ -19,8 +19,7 @@ trait HandlesSeo
         $namespace = Arr::get($options, 'prerender.config', "$resource.$verb");
 
         if ($metaTags = config("seo.$namespace")) {
-            $dataForSeo = Arr::get($options, 'prerender.dataForSeo', $data);
-            $data['seo'] = (new MetaTags($metaTags, $dataForSeo, $namespace));
+            $data['seo'] = (new MetaTags($metaTags, $data, $namespace));
         }
 
         if (defined('SHOULD_PRERENDER')) {

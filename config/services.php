@@ -22,7 +22,7 @@ return [
     'ses' => [
         'key' => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
-        'region' => env('SES_REGION', 'us-east-1'),
+        'region' => 'us-east-1',
     ],
 
     'sparkpost' => [
@@ -38,6 +38,10 @@ return [
     'tmdb' => [
         'key' => env('TMDB_API_KEY')
     ],
+
+     /**
+      * Socialite login credentials
+      */
 
     /**
      * Socialite login credentials

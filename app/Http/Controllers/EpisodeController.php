@@ -53,6 +53,8 @@ class EpisodeController extends Controller
 
     public function update($id)
     {
+        \DB::enableQueryLog();
+
         $episode = $this->episode->findOrFail($id);
 
         $this->authorize('update', $episode);

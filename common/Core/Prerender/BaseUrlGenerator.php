@@ -16,7 +16,7 @@ class BaseUrlGenerator implements AppUrlGenerator
     public function page($page)
     {
         $slug = str_slug($page['slug']);
-        return url("pages/{$page['id']}/$slug");
+        return url("titles/{$page['id']}/$slug");
     }
 
     /**

@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\User;
 use Common\Localizations\Localization;
-use Common\Settings\Settings;
 use Hash;
 use Illuminate\Console\Command;
 
@@ -48,12 +47,6 @@ class CleanDemoSite extends Command
                 $localization->delete();
             }
         });
-
-        // reset a few settings
-        app(Settings::class)->save([
-            'homepage.lists' => [274, 134, 136, 137],
-        ]);
-
     }
 
     private function cleanAdminUser($email)
