@@ -46,6 +46,7 @@ class TitleController extends Controller
      */
     public function index()
     {
+
         $this->authorize('index', Title::class);
 
         $pagination = app(PaginateTitles::class)->execute($this->request->all());

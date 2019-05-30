@@ -67,6 +67,13 @@ class PaginateTitles
         if ($score = Arr::get($params, 'score')) {
             $this->byRating($score, $paginator);
         }
+        
+        if ($links_language = Arr::get($params, 'links_language')) {
+            $paginator->query()->where('links_language', $links_language);
+        }
+        if ($links_quality = Arr::get($params, 'links_quality')) {
+            $paginator->query()->where('links_quality', $links_quality);
+        }
 
         if ($language = Arr::get($params, 'language')) {
             $paginator->query()->where('language', $language);
