@@ -1,0 +1,31 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/html/mate/files
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :database/migrations/2019_05_31_054629_links.php
+> git ls-files --stage -- database/migrations/
+> git show :database/migrations/2019_03_03_134511_add_adult_column_to_titles_and_people.php
+> git show :database/migrations/2019_05_31_054629_links.php
+> git ls-files --stage -- database/migrations/
+> git show :database/migrations/2019_03_03_134511_add_adult_column_to_titles_and_people.php
+> git show :database/migrations/2019_05_31_054629_links.php
+> git ls-files --stage -- database/migrations/
+> git show :database/migrations/2019_03_03_134511_add_adult_column_to_titles_and_people.php
+> git show :database/migrations/2018_12_29_145238_migrate_indexes_to_v2.php
+> git show :database/migrations/2018_12_26_145237_migrate_legacy_titles_table_data_to_v2.php
+> git show :database/migrations/2018_12_07_144126_create_video_ratings_table.php
+> git show :database/migrations/2019_03_03_134511_add_adult_column_to_titles_and_people.php
+> git show :database/migrations/2019_05_31_054629_links.php
+> git ls-files --stage -- database/migrations/
+> git show :database/migrations/2018_12_07_144126_create_video_ratings_table.php
+> git show :database/migrations/2019_05_31_054629_links.php
+> git ls-files --stage -- database/migrations/
