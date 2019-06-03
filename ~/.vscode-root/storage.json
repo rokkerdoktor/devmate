@@ -52,6 +52,28 @@
                                     "label": "/var/www/html/mate/files"
                                 },
                                 {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///var/www/html/mate/sourcecode",
+                                        "path": "/var/www/html/mate/sourcecode",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/var/www/html/mate/sourcecode"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///var/www/html/julius",
+                                        "path": "/var/www/html/julius",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/var/www/html/julius"
+                                },
+                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -1353,20 +1375,22 @@
     "pickerWorkingDir": "/var/www/html/mate",
     "openedPathsList": {
         "workspaces3": [
-            "file:///var/www/html/mate/files"
+            "file:///var/www/html/mate/files",
+            "file:///var/www/html/mate/sourcecode",
+            "file:///var/www/html/julius"
         ],
         "files2": []
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///var/www/html/mate/files",
-            "backupPath": "/var/www/html/mate/files/~/.vscode-root/Backups/3839be8c49533d0971feac6c347838d8",
+            "folder": "file:///var/www/html/julius",
+            "backupPath": "/var/www/html/mate/files/~/.vscode-root/Backups/fc31d5f6a7fa3240cb4c8b151e7fa37d",
             "uiState": {
                 "mode": 0,
-                "x": 1920,
-                "y": 27,
-                "width": 1920,
-                "height": 1026
+                "x": 1923,
+                "y": 55,
+                "width": 1024,
+                "height": 768
             }
         },
         "openedWindows": []

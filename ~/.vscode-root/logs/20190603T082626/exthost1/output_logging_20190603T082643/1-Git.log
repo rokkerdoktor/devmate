@@ -1,0 +1,57 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/html/mate/files
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :database/migrations/2019_05_31_054629_links.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Title.php
+> git show :database/migrations/2019_05_31_054629_links.php
+> git show :app/Title.php
+> git show :database/migrations/2019_03_03_134511_add_adult_column_to_titles_and_people.php
+> git show :app/Title.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Services/Titles/Retrieve/ShowTitle.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Video.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Video.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Video.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Video.php
+> git show :app/Link.php
+> git ls-files --stage -- app/
+> git show :app/Title.php
+> git show :app/Services/Titles/Retrieve/ShowTitle.php
+> git show :app/Title.php
+> git show :app/Services/Titles/Retrieve/ShowTitle.php
+> git show :app/Link.php
+> git ls-files --stage -- app/

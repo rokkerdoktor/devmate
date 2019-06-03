@@ -187,6 +187,11 @@ class Title extends Model
             ->orderBy('order', 'asc');
     }
 
+    public function links()
+    {
+         return $this->hasMany(Link::class); 
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

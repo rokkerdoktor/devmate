@@ -1,0 +1,4 @@
+[2019-05-31 15:08:15.398] [renderer1] [error] Inotify limit reached (ENOSPC)
+[2019-05-31 15:08:16.530] [renderer1] [info] no standard startup: not running latest version
+[2019-05-31 15:08:24.892] [renderer1] [error] Inotify limit reached (ENOSPC)
+[2019-05-31 15:08:25.226] [renderer1] [info] no standard startup: not just one text editor
