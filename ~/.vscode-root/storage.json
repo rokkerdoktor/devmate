@@ -1383,12 +1383,12 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///var/www/html/julius",
-            "backupPath": "/var/www/html/mate/files/~/.vscode-root/Backups/fc31d5f6a7fa3240cb4c8b151e7fa37d",
+            "folder": "file:///var/www/html/mate/files",
+            "backupPath": "/var/www/html/mate/files/~/.vscode-root/Backups/3839be8c49533d0971feac6c347838d8",
             "uiState": {
                 "mode": 0,
-                "x": 1923,
-                "y": 55,
+                "x": 709,
+                "y": 171,
                 "width": 1024,
                 "height": 768
             }
