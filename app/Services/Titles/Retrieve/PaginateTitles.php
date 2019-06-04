@@ -108,7 +108,7 @@ class PaginateTitles
         }
 
         if ( ! isset($params['perPage'])) {
-            $params['perPage'] = 16;
+            $params['perPage'] = 50;
         }
 
         return $paginator->paginate($params);
