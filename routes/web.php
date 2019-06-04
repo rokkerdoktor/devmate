@@ -15,6 +15,8 @@ Route::group(['prefix' => 'secure'], function () {
     Route::put('titles/{id}', 'TitleController@update');
     Route::delete('titles', 'TitleController@destroy');
 
+    //Linkplayer
+    Route::get('link/{id}', 'LinkController@show');
     // seasons
     Route::post('titles/{titleId}/seasons', 'SeasonController@store');
     Route::delete('seasons/{seasonId}', 'SeasonController@destroy');
