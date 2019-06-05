@@ -1,0 +1,17 @@
+127.0.0.1	localhost
+188.227.224.83	magento-dev	magento-dev.aion.hu
+188.227.224.74	puppet
+127.0.0.1	redis db 
+52.211.163.64 julius-k9.co.uk
+188.227.224.74  puppet
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+188.227.224.72 magento-prod
+188.227.224.73 magento-prod-db 
+
+188.227.224.72 julius-k9.co.uk www.julius-k9.co.uk 
+
+188.227.224.83 www.megatool.staging.aion.hu

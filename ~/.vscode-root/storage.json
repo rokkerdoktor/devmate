@@ -1375,8 +1375,8 @@
     "pickerWorkingDir": "/var/www/html/mate",
     "openedPathsList": {
         "workspaces3": [
-            "file:///var/www/html/mate/files",
             "file:///var/www/html/mate/sourcecode",
+            "file:///var/www/html/mate/files",
             "file:///var/www/html/julius"
         ],
         "files2": []

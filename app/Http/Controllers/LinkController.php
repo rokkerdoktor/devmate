@@ -23,12 +23,15 @@ class LinkController extends Controller
 {
     public function show($titleId, $seasonNumber = null)
     {
+        
         $link["link"] = Link::where('id', $titleId)->get();
 
         foreach($link["link"] as $details) 
         {
           $link["link"]->titlename=$details->title->name;
+          $link["link"][0]->izom=$details->url;
         }
+       
 
         return $link;
     }
