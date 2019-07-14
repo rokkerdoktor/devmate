@@ -17,7 +17,7 @@ Route::group(['prefix' => 'secure'], function () {
 
     
     //Linkplayer
-    Route::get('link/{id}', 'LinkController@showlink');
+    Route::get('linkplay/{id}', 'LinkController@showlink');
         //Link
         Route::get('linklist', 'LinkController@listnotapproved');
         Route::put('linkapproved/{id}', 'LinkController@approved');
