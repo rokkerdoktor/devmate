@@ -68,13 +68,6 @@ class PaginateTitles
             $this->byRating($score, $paginator);
         }
         
-        if ($links_language = Arr::get($params, 'links_language')) {
-            $paginator->query()->where('links_language', $links_language);
-        }
-        if ($links_quality = Arr::get($params, 'links_quality')) {
-            $paginator->query()->where('links_quality', $links_quality);
-        }
-
         if ($language = Arr::get($params, 'language')) {
             $paginator->query()->where('language', $language);
         }
@@ -82,7 +75,12 @@ class PaginateTitles
         if ($certification = Arr::get($params, 'certification')) {
             $paginator->query()->where('certification', $certification);
         }
-
+        if ($links_language = Arr::get($params, 'links_language')) {
+            $paginator->query()->where('links_language', $links_language);
+        }
+        if ($links_quality = Arr::get($params, 'links_quality')) {
+            $paginator->query()->where('links_quality', $links_quality);
+        }
         if ($country = Arr::get($params, 'country')) {
             $paginator->query()->whereHas('countries', function(Builder $query) use($country) {
                 $query->where('name', $country);
